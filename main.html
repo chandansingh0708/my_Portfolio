@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chandan Kumar — MERN Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <style>
+    :root {
+      --bg: #0b0b0c;
+      --muted: #9ca3af;
+      --accent: #7c3aed;
+      --card: rgba(255,255,255,0.03);
+    }
+    html,body { height: 100%; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: #e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      overflow-x: hidden;
+    }
+    .cursor {
+      position: fixed;
+      width: 12px;
+      height: 12px;
+      border-radius: 9999px;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%,-50%);
+      background: white;
+      mix-blend-mode: difference;
+      transition: transform .18s ease, width .18s ease, height .18s ease;
+    }
+    .cursor--grow { transform: translate(-50%,-50%) scale(2.6); }
+    .gradient-clip {
+      background: linear-gradient(90deg, #7c3aed, #ec4899, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.03);
+      backdrop-filter: blur(6px);
+    }
+    a { text-decoration: none; }
+    .section { opacity: 0; transform: translateY(30px); }
+
+  </style>
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+
+  <header class="fixed bg-[#0B0B0C] top-0 left-0 right-0 z-40 pt-6 pb-4">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+      <a href="#hero" class="text-xl font-extrabold gradient-clip">CHANDAN KUMAR</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#experience" class="hover:text-white">Experience</a>
+        <a href="#projects" class="hover:text-white">Projects</a>
+        <a href="#skills" class="hover:text-white">Skills</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </nav>
+      <div class="md:hidden text-gray-300">✦</div>
+    </div>
+  </header>
+
+  <main class="pt-28">
+    <section id="hero" class="max-w-6xl mx-auto px-6 min-h-[70vh] flex items-center">
+      <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="md:col-span-2">
+          <h1 class="text-4xl md:text-5xl font-extrabold">Hi, I’m <span class="gradient-clip">Chandan Kumar</span></h1>
+          <p class="mt-4 text-lg text-gray-300 max-w-2xl">
+            MERN Stack Developer specializing in creating dynamic, visually engaging user interfaces — GSAP and Framer Motion enthusiast. I build responsive full-stack applications and craft smooth front-end animations.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="mailto:Chandansingh0708cs@gmail.com" class="px-4 py-2 rounded-lg border border-white/10 card text-sm">Email</a>
+            <a href="https://github.com/chandansingh0708" target="_blank" class="px-4 py-2 rounded-lg border border-white/10 card text-sm">GitHub</a>
+            <a href="https://www.linkedin.com/in/chandan-kumar-806638257" target="_blank" class="px-4 py-2 rounded-lg border border-white/10 card text-sm">LinkedIn</a>
+          </div>
+
+          <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="card p-4 rounded-lg">
+              <h4 class="text-sm text-gray-300 uppercase">Phone</h4>
+              <p class="mt-1 font-medium">+91 7549336670</p>
+            </div>
+            <div class="card p-4 rounded-lg">
+              <h4 class="text-sm text-gray-300 uppercase">Location</h4>
+              <p class="mt-1 font-medium">Bhubaneswar, India</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-1 flex justify-center md:justify-end">
+          <div class="w-48 h-48 md:w-56 md:h-56 rounded-xl overflow-hidden card">
+           <div class="relative group">
+  <img src="assets/chandan.jpg" alt="Chandan Kumar"
+       class="w-full h-full object-cover rounded-2xl border border-white/10 shadow-xl transition duration-500 group-hover:scale-105">
+  <div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-transparent via-black/10 to-black/30 opacity-40"></div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section max-w-6xl mx-auto px-6 mt-12">
+      <div class="card p-8 rounded-lg">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="md:col-span-2">
+            <h3 class="text-2xl font-bold">Summary</h3>
+            <p class="mt-3 text-gray-300">
+              Results-driven MERN Stack Developer specializing in creating dynamic, visually engaging user interfaces with GSAP and Framer Motion. Proven ability to build, secure, and deploy responsive full-stack applications, including an event portal serving over 1,000 active users. Eager to apply strong backend and animation skills to deliver exceptional web experiences.
+            </p>
+
+            <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <h4 class="text-sm text-gray-300 uppercase">Education</h4>
+                <p class="mt-1 font-medium">International Institute of Information Technology, Bhubaneswar</p>
+                <p class="text-sm text-gray-400">B.Tech — Electrical & Electronics Engineering</p>
+                <p class="text-sm text-gray-400">Graduating May 2026 — 7.06 CGPA (up to 6th Sem)</p>
+              </div>
+
+              <div>
+                <h4 class="text-sm text-gray-300 uppercase">Tools & Databases</h4>
+                <p class="mt-1 text-sm text-gray-300">Git, GitHub, VS Code, Postman</p>
+                <p class="mt-1 text-sm text-gray-300">MongoDB, PostgreSQL, MySQL</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-sm text-gray-300 uppercase">Contact</h4>
+            <p class="mt-2 text-sm text-gray-200">Chandansingh0708cs@gmail.com</p>
+            <p class="mt-1 text-sm text-gray-200">+91 7549336670</p>
+            <div class="mt-4 space-y-2">
+              <a href="https://github.com/chandansingh0708" target="_blank" class="block text-sm text-indigo-300">github.com/chandansingh0708</a>
+              <a href="https://www.linkedin.com/in/chandan-kumar-806638257" target="_blank" class="block text-sm text-indigo-300">linkedin.com/in/chandan-kumar-806638257</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section max-w-6xl mx-auto px-6 mt-10">
+      <h3 class="text-2xl font-bold mb-4">Experience</h3>
+
+      <div class="space-y-4">
+        <div class="card p-6 rounded-lg">
+          <div class="flex items-start justify-between">
+            <div>
+              <h4 class="font-semibold">Frontend Developer — E-Summit Website</h4>
+              <p class="text-sm text-gray-400">IIIT Bhubaneswar, Odisha</p>
+            </div>
+            <p class="text-sm text-gray-400">Jan 2025 — Feb 2025</p>
+          </div>
+          <ul class="mt-3 list-disc ml-5 text-gray-300">
+            <li>Developed and deployed a responsive event portal using HTML, CSS, vanilla JavaScript, and GSAP for rich animations.</li>
+            <li>Implemented dynamic features such as schedules and speaker profiles, supporting real-time access by over 1,000 users via Vercel.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section max-w-6xl mx-auto px-6 mt-10">
+      <h3 class="text-2xl font-bold mb-4">Academic Projects</h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="card p-6 rounded-lg">
+          <h4 class="font-semibold">Gona — Dynamic Hotel Booking Platform</h4>
+          <p class="text-sm text-gray-400">Jan 2025 — Present</p>
+          <ul class="mt-3 list-disc ml-5 text-gray-300">
+            <li>Full-stack hotel booking platform using Express.js for session management and dynamic routing.</li>
+            <li>Responsive UI with GSAP animations and secure authentication + booking workflows.</li>
+          </ul>
+        </div>
+
+        <div class="card p-6 rounded-lg">
+          <h4 class="font-semibold">Tasks Guru — Lightweight Task Management App</h4>
+          <p class="text-sm text-gray-400">Nov 2024 — Dec 2024</p>
+          <ul class="mt-3 list-disc ml-5 text-gray-300">
+            <li>React + Tailwind CSS mobile-first app with persistent storage via LocalStorage.</li>
+            <li>Features: create/edit tasks, filtering; offline-capable data persistence.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section max-w-6xl mx-auto px-6 mt-10">
+      <h3 class="text-2xl font-bold mb-4">Technical Skills</h3>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <div class="card p-4 rounded-lg text-center">
+          <p class="font-semibold">Frontend</p>
+          <p class="text-sm text-gray-300 mt-2">React.js, JavaScript, Tailwind CSS, Framer Motion, GSAP, ScrollTrigger, Bootstrap</p>
+        </div>
+        <div class="card p-4 rounded-lg text-center">
+          <p class="font-semibold">Backend</p>
+          <p class="text-sm text-gray-300 mt-2">Node.js, Express.js, Mongoose, Passport.js, EJS</p>
+        </div>
+        <div class="card p-4 rounded-lg text-center">
+          <p class="font-semibold">Programming</p>
+          <p class="text-sm text-gray-300 mt-2">C++, SQL</p>
+        </div>
+        <div class="card p-4 rounded-lg text-center">
+          <p class="font-semibold">Databases & Tools</p>
+          <p class="text-sm text-gray-300 mt-2">MongoDB, PostgreSQL, MySQL, Git, GitHub, Postman</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="section max-w-6xl mx-auto px-6 mt-10">
+      <h3 class="text-2xl font-bold mb-4">Achievements</h3>
+      <ul class="list-disc ml-6 text-gray-300">
+        <li>D3 Hackathon 2024 — Top 3 Finalist (Web Development)</li>
+        <li>Annual TechFest 2024 — Led event planning, sponsorship outreach, and logistics for 1,000+ attendees</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section max-w-6xl mx-auto px-6 mt-10 pb-20">
+      <div class="card p-8 rounded-lg flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <h3 class="text-2xl font-bold">Let’s build something together</h3>
+          <p class="mt-2 text-gray-300">Open to new opportunities. My inbox is always open — I’ll get back to you.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="mailto:Chandansingh0708cs@gmail.com" class="px-6 py-3 rounded-lg border border-white/10">Say Hello</a>
+          <a href="https://github.com/chandansingh0708" target="_blank" class="px-6 py-3 rounded-lg border border-white/10">View GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="max-w-6xl mx-auto px-6 py-8 text-sm text-gray-500">
+    <div class="flex items-center justify-between">
+      <span>Designed & built by Chandan Kumar</span>
+      <span>© <span id="year"></span></span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.section').forEach((el, i) => {
+      gsap.fromTo(el, { autoAlpha: 0, y: 30 }, {
+        duration: 0.8,
+        autoAlpha: 1,
+        y: 0,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+        delay: i * 0.05
+      });
+    });
+
+    gsap.fromTo('#hero h1', { y: 30, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.8 });
+    gsap.fromTo('#hero p', { y: 20, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.9, delay: 0.15 });
+
+    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', (e) => {
+      gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.08 });
+    });
+    document.querySelectorAll('a, button').forEach(node => {
+      node.addEventListener('mouseenter', () => cursor.classList.add('cursor--grow'));
+      node.addEventListener('mouseleave', () => cursor.classList.remove('cursor--grow'));
+    });
+  </script>
+</body>
+</html>
